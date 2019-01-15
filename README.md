@@ -8,4 +8,9 @@ To build it you need the followig:
 - A [Scroll pHat HD](https://shop.pimoroni.com/products/scroll-phat-hd)
 - [Ubuntu Core 18](https://www.ubuntu.com/download/iot/raspberry-pi-2-3)
 
-Install [this snap](https://snapcraft.io/little-orange-display) to see a continuously scrolling message on the display.
+Install [this snap](https://snapcraft.io/little-orange-display) to see a continuously scrolling message on the display:
+```
+$ snap install little-orange-display
+$ snap connect little-orange-display:i2c pi:i2c-1
+$ snap start little-orange-display
+```
