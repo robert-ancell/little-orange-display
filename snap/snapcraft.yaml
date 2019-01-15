@@ -1,0 +1,21 @@
+name: ubuntu-core-raspi-display
+base: core18
+version: git
+summary: Demonstration app using Ubuntu Core and a Raspberry Pi
+description: |
+  This is a small app used to demonstrate using Ubuntu Core with a Raspberry Pi.
+  It uses a Scroll pHAT HD display to display a message.
+
+grade: stable
+confinement: strict
+
+apps:
+  ubuntu-core-raspi-display:
+    command: display
+    plugs:
+      - i2c
+
+parts:
+  ubuntu-core-raspi-display:
+    plugin: make
+    source: .
