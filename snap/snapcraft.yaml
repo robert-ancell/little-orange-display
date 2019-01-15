@@ -6,6 +6,10 @@ description: |
   This is a small app used to demonstrate using Ubuntu Core with a Raspberry Pi.
   It uses a Scroll pHAT HD display to display a message.
 
+architectures:
+  - build-on: all
+    run-on: armhf
+
 grade: stable
 confinement: strict
 
