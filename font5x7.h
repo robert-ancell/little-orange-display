@@ -1,0 +1,1 @@
+int draw_letter (unsigned char *pixels, int x, char c);
