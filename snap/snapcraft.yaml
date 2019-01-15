@@ -15,6 +15,7 @@ confinement: strict
 
 apps:
   ubuntu-core-raspi-display:
+    daemon: simple
     command: display
     plugs:
       - i2c
