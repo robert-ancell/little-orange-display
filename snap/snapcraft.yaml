@@ -1,10 +1,10 @@
-name: ubuntu-core-raspi-display
+name: little-orange-display
 base: core18
 version: git
 summary: Demonstration app using Ubuntu Core and a Raspberry Pi
 description: |
   This is a small app used to demonstrate using Ubuntu Core with a Raspberry Pi.
-  It uses a Scroll pHAT HD display to display a message.
+  It uses a Scroll pHAT HD display to show a message.
 
 architectures:
   - build-on: all
@@ -14,13 +14,13 @@ grade: stable
 confinement: strict
 
 apps:
-  ubuntu-core-raspi-display:
+  little-orange-display:
     daemon: simple
-    command: display
+    command: display-daemon
     plugs:
       - i2c
 
 parts:
-  ubuntu-core-raspi-display:
+  little-orange-display:
     plugin: make
     source: .

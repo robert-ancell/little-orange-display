@@ -1,11 +1,10 @@
-all: display
+all: display-daemon
 
-display: display.c font5x7.c font5x7.h
-	arm-linux-gnueabihf-gcc display.c font5x7.c -g -Wall -o display
+display-daemon: display-daemon.c font5x7.c font5x7.h
+	arm-linux-gnueabihf-gcc display-daemon.c font5x7.c -g -Wall -o display-daemon
 
-install: display
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp $< $(DESTDIR)$(PREFIX)/bin/display
+install: display-daemon
+	cp $< $(DESTDIR)$(PREFIX)/display-daemon
 
 clean:
-	rm display
+	rm display-daemon
